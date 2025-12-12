@@ -6,7 +6,7 @@ export default function ProductsList({products}:{products:Product[]}){
     <div>
         {products.map((product)=>(
             <>
-           <Link href="/product-detail">
+           <Link href={"/products/"+product.id}>
             <div key={product.id}>{product.name}</div>
             <Image src={'/'+product.imageUrl} alt={product.name} width={150} height={150}/>
             <p> {product.description}</p>
